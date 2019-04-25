@@ -1,0 +1,141 @@
+student@T14:~$ cd ajce
+student@T14:~/ajce$ cd mca
+student@T14:~/ajce/mca$ cd copy
+student@T14:~/ajce/mca/copy$ lsx
+
+Command 'lsx' not found, did you mean:
+
+  command 'lsd' from snap lsd (0.13.0)
+  command 'lvx' from deb alliance
+  command 'sx' from deb lrzsz
+  command 'lyx' from deb lyx
+  command 'lsc' from deb livescript
+  command 'lsm' from deb lsm
+  command 'ls' from deb coreutils
+  command 'lsw' from deb suckless-tools
+  command 'osx' from deb opensp
+  command 'lex' from deb flex
+  command 'lex' from deb flex-old
+  command 'lsh' from deb lsh-client
+
+See 'snap info <snapname>' for additional versions.
+
+student@T14:~/ajce/mca/copy$ ls
+c1.txt  fake  file1.txt  file2.txt  g3.txt  merge  n1  n2  new.txt
+student@T14:~/ajce/mca/copy$ cat > grep.txt
+hello dear welcome to the new page.......
+student@T14:~/ajce/mca/copy$ grep dear grep.txt
+hello dear welcome to the new page.......
+student@T14:~/ajce/mca/copy$ grep -b2 "the" grep.txt
+0:hello dear welcome to the new page.......
+42:Software is a set of instructions, data or programs used to operate computers and execute specific tasks. Opposite of hardware, which describes the physical aspects of a computer, software is a generic term used to refer to applications, scripts and programs that run on a device. Software can be thought of as the variable part of a computer and hardware the invariable part.
+student@T14:~/ajce/mca/copy$ grep -b2 "the" grep.txt
+0:hello dear welcome to the new page.......
+42-Software is a set of instructions, data or programs used to operate computers and execute specific tasks.
+148:Software can be thought of as the variable part of a computer and hardware the invariable part.
+student@T14:~/ajce/mca/copy$ grep -b2 "tasks" grep.txt
+42-Software is a set of instructions,
+77- data or programs used to operate
+111: computers and execute specific tasks.
+150-Software can be thought of as the variable part 
+199-of a computer and hardware the invariable part.
+student@T14:~/ajce/mca/copy$ grep -A2 "tasks" grep.txt
+ computers and execute specific tasks.
+Software can be thought of as the variable part 
+of a computer and hardware the invariable part.
+student@T14:~/ajce/mca/copy$ grep -A2 "tasks" grep.txt
+ computers and execute specific tasks.
+Software can be thought of as the variable part 
+of a computer and hardware the 
+student@T14:~/ajce/mca/copy$ grep -B2 "hardware" grep.txt
+ computers and execute specific tasks.
+Software can be thought of as the variable part 
+of a computer and hardware the 
+student@T14:~/ajce/mca/copy$ grep -w "hardware" grep.txt
+of a computer and hardware the 
+student@T14:~/ajce/mca/copy$ grep -w "HARDWARE" grep.txt
+student@T14:~/ajce/mca/copy$ grep -W "HARDWARE" grep.txt
+grep: invalid option -- 'W'
+Usage: grep [OPTION]... PATTERN [FILE]...
+Try 'grep --help' for more information.
+student@T14:~/ajce/mca/copy$ grep -w "HARDWARE" grep.txt
+student@T14:~/ajce/mca/copy$ grep -w "HardWare" grep.txt
+student@T14:~/ajce/mca/copy$ grep -w "Hardware" grep.txt
+student@T14:~/ajce/mca/copy$ grep -w "hardware" grep.txt
+of a computer and hardware the 
+student@T14:~/ajce/mca/copy$ grep -v "hardware" grep.txt
+hello dear welcome to the new page.......
+Software is a set of instructions,
+ data or programs used to operate
+ computers and execute specific tasks.
+Software can be thought of as the variable part 
+invariable part.
+student@T14:~/ajce/mca/copy$ grep -l "hardware" grep.txt
+grep.txt
+student@T14:~/ajce/mca/copy$ grep -w "hardware" grep.txt
+of a computer and hardware the 
+student@T14:~/ajce/mca/copy$ grep -c "of" grep.txt
+3
+student@T14:~/ajce/mca/copy$ grep -c "hardware" grep.txt
+1
+student@T14:~/ajce/mca/copy$ grep -w "hardware" grep.txt
+of a computer and hardware the 
+student@T14:~/ajce/mca/copy$ grep -n "hardware" grep.txt
+6:of a computer and hardware the 
+student@T14:~/ajce/mca/copy$ grep "^hardware" grep.txt
+student@T14:~/ajce/mca/copy$ grep "^tasks" grep.txt
+student@T14:~/ajce/mca/copy$ grep "^software" grep.txt
+software is a set of instructions,
+student@T14:~/ajce/mca/copy$ grep "^of" grep.txt
+of a computer and hardware the 
+student@T14:~/ajce/mca/copy$ grep "^of" grep.txt
+of a computer and hardware the 
+student@T14:~/ajce/mca/copy$ grep "^software" grep.txt
+software is a set of instructions,
+student@T14:~/ajce/mca/copy$ grep "^software" grep.txt
+software is a set of instructions,
+student@T14:~/ajce/mca/copy$ grep "^of" grep.txt
+of software can be thought of as the variable part 
+of a computer and hardware the
+student@T14:~/ajce/mca/copy$ cat > grep2.txt
+jkdhwwjhk
+tdghsjayghd
+jjjjj  
+lllll
+mmmmm
+nnnn
+student@T14:~/ajce/mca/copy$ grep "software" grep.txt grep2.txt
+grep.txt:software is a set of instructions,
+grep.txt:of software can be thought of as the variable part 
+grep2.txt:software
+student@T14:~/ajce/mca/copy$ grep "part$" grep.txt
+invariable part
+student@T14:~/ajce/mca/copy$ grep "part$" grep.txt
+invariable part
+student@T14:~/ajce/mca/copy$ grep "part.$" grep.txt
+as the variable part.
+invariable part.
+student@T14:~/ajce/mca/copy$ grep "task.$" grep.txt
+task is the task.
+student@T14:~/ajce/mca/copy$ grep "tasks.$" grep.txt
+computers and execute specific tasks.
+task is the tasks.
+student@T14:~/ajce/mca/copy$ grep "task$" grep.txt
+student@T14:~/ajce/mca/copy$ grep "task$" grep.txt
+computers and execute specific task
+task is the task
+student@T14:~/ajce/mca/copy$ egrep -w 'hardware|software' grep.txt grep2.txt
+grep.txt:software is a set of instructions,
+grep.txt:of software can be thought of
+grep.txt:of a computer and hardware the
+grep2.txt:hardware
+grep2.txt:software
+student@T14:~/ajce/mca/copy$ 
+student@T14:~/ajce/mca/copy$ grep 'software *'grep.txt grep2.txt
+student@T14:~/ajce/mca/copy$ grep 'software *' grep.txt grep2.txt
+grep.txt:software is a set of instructions,
+grep.txt:of software can be thought of
+grep2.txt:software
+student@T14:~/ajce/mca/copy$ 
+
+

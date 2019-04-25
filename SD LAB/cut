@@ -1,0 +1,114 @@
+student@T13:~/arya$ cut -c4 sd.txt
+o
+d
+
+
+i
+
+
+
+
+
+i
+ 
+
+student@T13:~/arya$ cut -c4 check.txt
+a
+a
+u
+student@T13:~/arya$ cut -c1 2 3 check.txt
+cut: 2: No such file or directory
+cut: 3: No such file or directory
+a
+d
+a
+student@T13:~/arya$ cut -c1,2,3 check.txt
+ary
+don
+arj
+student@T13:~/arya$ man cut
+student@T13:~/arya$ cut -b l- check.txt
+cut: invalid byte/character position ‘l-’
+Try 'cut --help' for more information.
+student@T13:~/arya$ cut -b  check.txt
+cut: invalid byte/character position ‘check.txt’
+Try 'cut --help' for more information.
+student@T13:~/arya$ cut -b  sd.txt
+cut: invalid byte/character position ‘sd.txt’
+Try 'cut --help' for more information.
+student@T13:~/arya$ cut -b 3 sd.txt
+h
+a
+n
+
+d
+
+t
+
+
+
+d
+t
+
+
+student@T13:~/arya$ cut -f 2 check.txt
+arya 
+dona
+arjun
+ kanjirappally
+student@T13:~/arya$ cut -f 2 check.txt
+def
+hello
+khlhkj
+student@T13:~/arya$ cut -f 2 check.txt
+def
+hello
+khlhkj
+ass qwer iklo bhj
+student@T13:~/arya$ cut -f 2 check.txt
+def
+hello
+khlhkj
+ass qwer iklo bhj
+adf,lopk,jytghhjf1234,7689
+student@T13:~/arya$ cut -f 3 check.txt
+ghi
+good
+hlk
+ass qwer iklo bhj
+adf,lopk,jytghhjf1234,7689
+eee
+ff
+
+
+student@T13:~/arya$ cut -d, -f 3 check.txt
+abc	def	ghi
+hiiii	hello	good
+hjjlh	khlhkj	hlk
+ass qwer iklo bhj
+jytghhjf1234
+qwe 	ee	eee
+eww	dd	ff
+
+student@T13:~/arya$ cut -d, -f 2 check.txt
+abc	def	ghi
+hiiii	hello	good
+hjjlh	khlhkj	hlk
+ass qwer iklo bhj
+lopk
+qwe 	ee	eee
+eww	dd	ff
+gghhh
+	
+student@T13:~/arya$ cut -d, -f 2 check.txt
+abc	def	ghi
+hiiii	hello	good
+hjjlh	khlhkj	hlk
+ass qwer iklo bhj
+lopk
+qwe 	ee	eee
+eww	dd	ff
+gghhh
+	
+|hhj| || HHHH| |hj|
+

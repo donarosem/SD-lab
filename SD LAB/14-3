@@ -1,0 +1,92 @@
+student@T14:~$ cd cd ajce
+bash: cd: too many arguments
+student@T14:~$ cd ajce
+student@T14:~/ajce$ cd mca
+student@T14:~/ajce/mca$ cd copy
+student@T14:~/ajce/mca/copy$ cd merge
+student@T14:~/ajce/mca/copy/merge$ ls
+c1.txt  file1.txt  file2.txt  g1.txt
+student@T14:~/ajce/mca/copy/merge$ ls -a
+.  ..  c1.txt  file1.txt  file2.txt  g1.txt
+student@T14:~/ajce/mca/copy/merge$ ls -a > file1.txt
+student@T14:~/ajce/mca/copy/merge$ wc -l users
+wc: users: No such file or directory
+student@T14:~/ajce/mca/copy/merge$ wc -l > users
+jdgauydgajhdyg
+adkjhaujdh
+dhjawd
+kjdyhjd
+student@T14:~/ajce/mca/copy/merge$ myprogram 2 >errorfile
+myprogram: command not found
+student@T14:~/ajce/mca/copy/merge$ myprogram 2 > errorfile
+myprogram: command not found
+student@T14:~/ajce/mca/copy/merge$ myprogram 2> errorfile
+student@T14:~/ajce/mca/copy/merge$ cat file1.txt | more
+.
+..
+c1.txt
+file1.txt
+file2.txt
+g1.txt
+student@T14:~/ajce/mca/copy/merge$ cat file2.txt | head -2 | tail -2
+welcome to the file2..
+student@T14:~/ajce/mca/copy/merge$ cd ..
+student@T14:~/ajce/mca/copy$ cat grep2.txt | head -2 | tail -2
+jkdhwwjhk
+tdghsjayghd
+student@T14:~/ajce/mca/copy$ cat grep2.txt | head -2 | tail -1
+tdghsjayghd
+student@T14:~/ajce/mca/copy$ cat > chmod.txt
+hsdujhf
+ikusfyhik
+dkfkf
+khfu
+student@T14:~/ajce/mca/copy$ chmod u=rwx, g=rw,o=r chmod.txt
+chmod: invalid mode: ‘u=rwx,’
+Try 'chmod --help' for more information.
+student@T14:~/ajce/mca/copy$ chmod u=rwx,g=rw,o=r chmod.txt
+student@T14:~/ajce/mca/copy$ ls -l chmod.txt
+-rwxrw-r-- 1 student student 29 Mar 14 15:18 chmod.txt
+student@T14:~/ajce/mca/copy$ chmod u=x,g=x,o=x chmod.txt
+student@T14:~/ajce/mca/copy$ ls -l chmod.txt
+---x--x--x 1 student student 29 Mar 14 15:18 chmod.txt
+student@T14:~/ajce/mca/copy$ cat > chmod.txt
+bash: chmod.txt: Permission denied
+student@T14:~/ajce/mca/copy$ chmod u=r,g=r,o=r chmod.txt
+student@T14:~/ajce/mca/copy$ ls -l chmod.txt
+-r--r--r-- 1 student student 29 Mar 14 15:18 chmod.txt
+student@T14:~/ajce/mca/copy$ chmod u=w,g=w,o=w chmod.txt
+student@T14:~/ajce/mca/copy$ ls -l chmod.txt
+--w--w--w- 1 student student 29 Mar 14 15:18 chmod.txt
+student@T14:~/ajce/mca/copy$ chmod 7,4,2 chmod.txt
+chmod: invalid mode: ‘7,4,2’
+Try 'chmod --help' for more information.
+student@T14:~/ajce/mca/copy$ chmod 754 chmod.txt
+student@T14:~/ajce/mca/copy$ ls -l chmod.txt
+-rwxr-xr-- 1 student student 38 Mar 14 15:27 chmod.txt
+student@T14:~/ajce/mca/copy$ chmod 222 chmod.txt
+student@T14:~/ajce/mca/copy$ ls -l chmod.txt
+--w--w--w- 1 student student 38 Mar 14 15:27 chmod.txt
+student@T14:~/ajce/mca/copy$ chmod u+w,g+w,o+w chmod.txt
+student@T14:~/ajce/mca/copy$ ls -l chmod.txt
+--w--w--w- 1 student student 47 Mar 14 15:32 chmod.txt
+student@T14:~/ajce/mca/copy$ chmod u+w+r,g+w+x,o+w+x chmod.txt
+student@T14:~/ajce/mca/copy$ ls -l chmod.txt
+-rw--wx-wx 1 student student 55 Mar 14 15:34 chmod.txt
+student@T14:~/ajce/mca/copy$ cat > chmod.txt
+
+
+
+student@T14:~/ajce/mca/copy$ chmod u+w,g+w,o+w chmod.txt
+student@T14:~/ajce/mca/copy$ ls -l chmod.txt
+-rw--wx-wx 1 student student 3 Mar 14 15:35 chmod.txt
+student@T14:~/ajce/mca/copy$ chmod u+r,g+r,o+r chmod.txt
+student@T14:~/ajce/mca/copy$ ls -l chmod.txt
+-rw-rwxrwx 1 student student 3 Mar 14 15:35 chmod.txt
+student@T14:~/ajce/mca/copy$ chmod u=x,g=x,o=x chmod.txt
+student@T14:~/ajce/mca/copy$ ls -l chmod.txt
+---x--x--x 1 student student 29 Mar 14 15:38 chmod.txt
+student@T14:~/ajce/mca/copy$ cat > chmod.txt
+bash: chmod.txt: Permission denied
+student@T14:~/ajce/mca/copy$ chmod u+x,g+x,o+x chmod.txt
+

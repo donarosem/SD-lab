@@ -1,0 +1,237 @@
+student@T14:~$ git config --global user.name "donarosem"
+student@T14:~$ git config --global user.email "donarose@mca.ajce.in"
+student@T14:~$ git init rep
+Initialized empty Git repository in /home/student/rep/.git/
+student@T14:~$ cd rep
+student@T14:~/rep$ gedit README
+
+(gedit:3730): Gtk-WARNING **: 11:46:31.204: Failed to measure available space: The specified location is not supported
+
+(gedit:3730): Gtk-WARNING **: 11:47:12.200: Failed to measure available space: The specified location is not supported
+student@T14:~/rep$ ls
+program1.c  program1.git
+student@T14:~/rep$ git add program1.c
+student@T14:~/rep$ git commit -m "A C-language program"
+[master (root-commit) 7717391] A C-language program
+ 1 file changed, 7 insertions(+)
+ create mode 100644 program1.c
+student@T14:~/rep$ git remote add origin https://github.com/donarosem/Repo1.git
+
+student@T14:~/rep$ git push origin master
+Username for 'https://github.com': donarosem
+Password for 'https://donarosem@github.com': 
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 282 bytes | 282.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/donarosem/Repo1.git
+ * [new branch]      master -> master
+
+student@T14:~/rep$ git branch newbranch
+student@T14:~/rep$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	program1.git
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+student@T14:~/rep$ git clone https://github.com/donarosem/Repo1
+Cloning into 'Repo1'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 3 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), done.
+
+student@T14:~/rep$ git log
+commit 7717391505197f631133f5d0c2e872aef1819bd1 (HEAD -> master, origin/master, newbranch)
+Author: donarosem <donarose@mca.ajce.in>
+Date:   Mon Apr 8 11:49:14 2019 +0530
+
+    A C-language program
+
+student@T14:~/rep$ git checkout newbranch
+Switched to branch 'newbranch'
+
+student@T14:~/rep$ git status
+On branch newbranch
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	Repo1/
+	program1.git
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+student@T14:~/rep$ git branch branch2
+
+student@T14:~/rep$ git status
+On branch newbranch
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	Repo1/
+	program1.git
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+student@T14:~/rep$ git checkout master
+Switched to branch 'master'
+student@T14:~/rep$ git checkout branch2
+Switched to branch 'branch2'
+
+student@T14:~/rep$ git branch -d branch2
+error: Cannot delete branch 'branch2' checked out at '/home/student/rep'
+
+student@T14:~/rep$ git checkout master
+Switched to branch 'master'
+student@T14:~/rep$ git branch -d branch2
+Deleted branch branch2 (was 7717391).
+
+
+student@T14:~/rep$ git push origin newbranch
+Username for 'https://github.com': donarosem
+Password for 'https://donarosem@github.com': 
+Total 0 (delta 0), reused 0 (delta 0)
+remote: 
+remote: Create a pull request for 'newbranch' on GitHub by visiting:
+remote:      https://github.com/donarosem/Repo1/pull/new/newbranch
+remote: 
+To https://github.com/donarosem/Repo1.git
+ * [new branch]      newbranch -> newbranch
+
+student@T14:~/rep$ git fetch origin newbranch
+From https://github.com/donarosem/Repo1
+ * branch            newbranch  -> FETCH_HEAD
+student@T14:~/rep$ git merge origin/newbranch
+Already up to date.
+
+student@T14:~/rep$ git pull origin master
+From https://github.com/donarosem/Repo1
+ * branch            master     -> FETCH_HEAD
+Already up to date.
+
+student@T14:~/rep$ git branch branch2
+student@T14:~/rep$ git push origin branch2
+Username for 'https://github.com': donarosem
+Password for 'https://donarosem@github.com': 
+Total 0 (delta 0), reused 0 (delta 0)
+remote: 
+remote: Create a pull request for 'branch2' on GitHub by visiting:
+remote:      https://github.com/donarosem/Repo1/pull/new/branch2
+remote: 
+To https://github.com/donarosem/Repo1.git
+ * [new branch]      branch2 -> branch2
+
+student@T14:~/rep$ git branch -d branch2
+Deleted branch branch2 (was 7717391).
+student@T14:~/rep$ git branch branch2
+student@T14:~/rep$ git push origin branch2
+Username for 'https://github.com': donarosem
+Password for 'https://donarosem@github.com': 
+Total 0 (delta 0), reused 0 (delta 0)
+remote: 
+remote: Create a pull request for 'branch2' on GitHub by visiting:
+remote:      https://github.com/donarosem/Repo1/pull/new/branch2
+remote: 
+To https://github.com/donarosem/Repo1.git
+ * [new branch]      branch2 -> branch2
+
+student@T14:~/rep$ git diff
+student@T14:~/rep$ git diff --start newbranch branch2
+usage: git diff [<options>] [<commit> [<commit>]] [--] [<path>...]
+student@T14:~/rep$ 
+
+
+
+
+
+student@T14:~$ git config --global user.name "donarosem"
+student@T14:~$ git config --global user.email "donarosemathew97@gmail.com"
+student@T14:~$ cd rep
+student@T14:~/rep$ git rebase -i newbranch
+Successfully rebased and updated refs/heads/master.
+student@T14:~/rep$ git revert HEAD
+[master 85bcea9] Revert "A C-language program"
+ 1 file changed, 7 deletions(-)
+ delete mode 100644 program1.c
+student@T14:~/rep$ 
+
+student@T14:~/rep$ gedit file
+student@T14:~/rep$ git add file.c
+student@T14:~/rep$ git commit -m "C-pROGRAM FOR ADDING INTEGERS"
+[master d863793] C-pROGRAM FOR ADDING INTEGERS
+ 2 files changed, 24 insertions(+)
+ create mode 100644 file.c
+ create mode 100644 program.c
+student@T14:~/rep$ git remote add origin git https://github.com/donarosem/Repo1.git
+usage: git remote add [<options>] <name> <url>
+
+    -f, --fetch           fetch the remote branches
+    --tags                import all tags and associated objects when fetching
+                          or do not fetch any tag at all (--no-tags)
+    -t, --track <branch>  branch(es) to track
+    -m, --master <branch>
+                          master branch
+    --mirror[=<push|fetch>]
+                          set up remote as a mirror to push to or fetch from
+
+student@T14:~/rep$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	Repo1/
+	file
+	program1.git
+
+nothing added to commit but untracked files present (use "git add" to track)
+student@T14:~/rep$ git push origin master
+Username for 'https://github.com': donarosem
+Password for 'https://donarosem@github.com': 
+Counting objects: 5, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (5/5), 596 bytes | 596.00 KiB/s, done.
+Total 5 (delta 0), reused 0 (delta 0)
+To https://github.com/donarosem/Repo1.git
+   7717391..d863793  master -> master
+student@T14:~/rep$ git fetch origin master
+From https://github.com/donarosem/Repo1
+ * branch            master     -> FETCH_HEAD
+student@T14:~/rep$ git diff origin/master
+student@T14:~/rep$ git diff origin/newbranch
+diff --git a/file.c b/file.c
+new file mode 100644
+index 0000000..7ac9533
+--- /dev/null
++++ b/file.c
+@@ -0,0 +1,12 @@
++#include <stdio.h>
++int main()
++{
++    int number;
++
++    printf("Enter an integer: ");  
++    
++    scanf("%d", &number);  
++    
++    printf("You entered: %d", number);
++    return 0;
++}
+diff --git a/program.c b/program.c
+new file mode 100644
+index 0000000..7ac9533
+--- /dev/null
++++ b/program.c
+:
+
+
+
+
+
+
+

@@ -1,0 +1,189 @@
+student@T14:~$ ./if.sh
+Enter a Number: -6
+Negative
+
+ ./if.sh
+Enter a Number: 7
+positive
+
+input
+echo -e "Enter a Number:\c"
+read number
+if [ $number -lt 0 ] 
+then
+echo "Negative"
+elif [ $number -eq 0 ] 
+then
+echo zero
+else
+  echo positive
+fi
+
+
+check the week using if statement
+
+
+if [ "$1" == "Monday" ]
+then
+echo "The Typed argument is monday"
+elif [ "$1" == "Tuesday" ]
+then
+echo "Typed argument is tuesday"
+else
+echo "Typed argument is neither monday or tuesday"
+fi
+
+student@T14:~$ gedit check.sh
+student@T14:~$ chmod +x check.sh
+student@T14:~$ ./check.sh Monday
+The Typed argument is monday
+student@T14:~$ ./check.sh Tuesday
+Typed argument is tuesday
+student@T14:~$ ./check.sh wednesday
+Typed argument is neither monday or tuesday
+student@T14:~$ 
+
+
+
+forloop
+
+ip:
+
+for i in 3 2 5 7
+do
+echo "$i times 5 is $(( $i * 5 )) "
+done
+
+gedit check.sh
+student@T14:~$ gedit if.sh
+student@T14:~$ gedit forloop.sh
+student@T14:~$ chmod +x forloop.sh
+student@T14:~$ ./forloop.sh
+3 times 5 is 15 
+2 times 5 is 10 
+5 times 5 is 25 
+7 times 5 is 35 
+
+
+forloop2
+
+ip:
+
+for i in {1..5}
+do
+echo "Welcome $i times"
+done
+
+student@T14:~$ gedit forloop2.sh
+student@T14:~$ ./forloop2.sh
+Welcome 1 times
+Welcome 2 times
+Welcome 3 times
+Welcome 4 times
+Welcome 5 times
+
+
+forloop-program3(forloop2.sh)
+
+ip:
+for i in {0..10..2}
+do
+echo "Welcome $i times"
+done
+
+student@T14:~$ gedit forloop2.sh
+student@T14:~$ gedit forloop2.sh
+student@T14:~$ gedit forloop2.sh
+student@T14:~$ chmod +x forloop2.sh
+student@T14:~$ ./forloop2.sh
+Welcome 0 times
+Welcome 2 times
+Welcome 4 times
+Welcome 6 times
+Welcome 8 times
+Welcome 10 times
+
+
+
+
+program4(forloop3.sh)
+
+ip:
+
+
+for (( c=1; c<=5; c++ ))
+do
+echo "Welcome $c times"
+done
+
+
+student@T14:~$ gedit forloop2.sh
+student@T14:~$ gedit forloop3.sh
+student@T14:~$ chmod +x forloop3.sh
+student@T14:~$ ./forloop3.sh
+Welcome 1 times
+Welcome 2 times
+Welcome 3 times
+Welcome 4 times
+Welcome 5 times
+student@T14:~$ 
+
+
+
+forloop program-5(forlooperror.sh)
+
+
+ip:
+
+for (( ; ; ))
+do
+echo "infinite loops [ hit CTRL+C to stop]"
+done
+
+op:
+
+infinite loops [ hit CTRL+C to stop]
+infinite loops [ hit CTRL+C to stop]
+infinite loops [ hit CTRL+C to stop]
+infinite loops [ hit CTRL+C to stop]
+infinite loops [ hit CTRL+C to stop]
+infinite loops [ hit CTRL+C to stop]
+infinite loops [ hit CTRL+C to stop]
+infinite loops [ hit CTRL+C to stop]
+infinite loops [ hit CTRL+C to stop]
+infinite loops [ hit CTRL+C to stop]
+infinite loops [ hit CTRL+C to stop]
+infinite loops [ hit CTRL+C to stop]
+infinite loops [ hit CTRL+C to stop]
+infinite loops [ hit CTRL+C to stop]
+infinite loops [ hit CTRL+C to stop]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

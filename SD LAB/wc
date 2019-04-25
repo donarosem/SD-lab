@@ -1,0 +1,51 @@
+student@T13:~$ cd arya
+student@T13:~/arya$ cat >check.txt
+arya 
+dona
+arjun
+^Z
+[1]+  Stopped                 cat > check.txt
+student@T13:~/arya$ cat check.txt
+arya 
+dona
+arjun
+student@T13:~/arya$ wc check.txt
+ 3  3 17 check.txt
+student@T13:~/arya$ wc -l check.txt
+3 check.txt
+student@T13:~/arya$ wc -c check.txt
+17 check.txt
+student@T13:~/arya$ wc -m check.txt
+17 check.txt
+student@T13:~/arya$ wc -L check.txt
+5 check.txt
+student@T13:~/arya$ wc -w check.txt
+3 check.txt
+student@T13:~/arya$ wc sd.txt
+13 19 98 sd.txt
+student@T13:~/arya$ wc -l sd.txt
+13 sd.txt
+student@T13:~/arya$ wc -c sd.txt
+98 sd.txt
+student@T13:~/arya$ wc -m sd.txt
+98 sd.txt
+student@T13:~/arya$ wc -L sd.txt
+36 sd.txt
+student@T13:~/arya$ wc -w sd.txt
+19 sd.txt
+student@T13:~/arya$ cat sd.txt
+echo
+read
+man
+cd
+mkdir
+ls
+cat
+
+
+
+mkdir :to make directories
+cat : to display the content of file
+
+student@T13:~/arya$ 00000
+

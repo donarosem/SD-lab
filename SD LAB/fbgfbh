@@ -1,0 +1,71 @@
+student@T14:~$ cd ajce
+student@T14:~/ajce$ cd mca
+student@T14:~/ajce/mca$ ls
+copy
+student@T14:~/ajce/mca$ cd copy
+student@T14:~/ajce/mca/copy$ ls
+c1.txt  fake       file2.txt  g3.txt  n1  n3
+f1.txt  file1.txt  g1.txt     merge   n2  new.txt
+student@T14:~/ajce/mca/copy$ pwd
+/home/student/ajce/mca/copy
+student@T14:~/ajce/mca/copy$ cp file1.txt ^C
+student@T14:~/ajce/mca/copy$ cp file1.txt /home/student/ajce/mca/copy
+cp: 'file1.txt' and '/home/student/ajce/mca/copy/file1.txt' are the same file
+student@T14:~/ajce/mca/copy$ cp file1.txt /home/student/ajce/mca/copy/fake/mergestudent@T14:~/ajce/mca/copy$ cp c1.txt /home/student/ajce/mca/copy/fake/merge
+student@T14:~/ajce/mca/copy$ pwd
+/home/student/ajce/mca/copy
+student@T14:~/ajce/mca/copy$ n1 /home/student/ajce/mca
+n1: command not found
+student@T14:~/ajce/mca/copy$ -R n1 /home/student/ajce/mca
+-R: command not found
+student@T14:~/ajce/mca/copy$ cp n1 /home/student/ajce/mca
+cp: -r not specified; omitting directory 'n1'
+student@T14:~/ajce/mca/copy$ cp -R n1 /home/student/ajce/mca
+student@T14:~/ajce/mca/copy$ cd fake
+student@T14:~/ajce/mca/copy/fake$ cd merge
+student@T14:~/ajce/mca/copy/fake/merge$ ls
+c1.txt  file1.txt  file2.txt
+student@T14:~/ajce/mca/copy/fake/merge$ rm c1.txt
+student@T14:~/ajce/mca/copy/fake/merge$ ls
+file1.txt  file2.txt
+student@T14:~/ajce/mca/copy/fake/merge$ cd ..
+student@T14:~/ajce/mca/copy/fake$ cd ..
+student@T14:~/ajce/mca/copy$ ls
+c1.txt  fake       file2.txt  g3.txt  n1  n3
+f1.txt  file1.txt  g1.txt     merge   n2  new.txt
+student@T14:~/ajce/mca/copy$ rm f1.txt g1.txt
+student@T14:~/ajce/mca/copy$ ls
+c1.txt  fake  file1.txt  file2.txt  g3.txt  merge  n1  n2  n3  new.txt
+student@T14:~/ajce/mca/copy$ rm -R n3 
+student@T14:~/ajce/mca/copy$ ls
+c1.txt  fake  file1.txt  file2.txt  g3.txt  merge  n1  n2  new.txt
+student@T14:~/ajce/mca/copy$ cd fake
+student@T14:~/ajce/mca/copy/fake$ cd merge
+student@T14:~/ajce/mca/copy/fake/merge$ ls
+file1.txt  file2.txt
+student@T14:~/ajce/mca/copy/fake/merge$ *.txt
+file1.txt: command not found
+student@T14:~/ajce/mca/copy/fake/merge$ rm *.txt
+student@T14:~/ajce/mca/copy/fake/merge$ ls
+student@T14:~/ajce/mca/copy/fake/merge$ 
+student@T14:~/ajce/mca/copy/fake/merge$ cd ..
+student@T14:~/ajce/mca/copy/fake$ rm merge
+rm: cannot remove 'merge': Is a directory
+student@T14:~/ajce/mca/copy/fake$ rm -R merge
+student@T14:~/ajce/mca/copy/fake$ ls
+n1  n2  n3
+student@T14:~/ajce/mca/copy/fake$ pwd
+/home/student/ajce/mca/copy/fake
+student@T14:~/ajce/mca/copy/fake$ cd n1
+student@T14:~/ajce/mca/copy/fake/n1$ 
+student@T14:~/ajce/mca/copy/fake/n1$ cd ..
+student@T14:~/ajce/mca/copy/fake$ cd ..
+student@T14:~/ajce/mca/copy$ cd ..
+student@T14:~/ajce/mca$ mkdir dona
+student@T14:~/ajce/mca$ cd dona
+student@T14:~/ajce/mca/dona$ cat > mine.txt
+Dona Rose Mathew
+S4 MCA
+Regular
+student@T14:~/ajce/mca/dona$ 
+

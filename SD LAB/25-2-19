@@ -1,0 +1,180 @@
+student@T14:~$ man head
+student@T14:~$ cd ajce
+student@T14:~/ajce$ cd mca
+student@T14:~/ajce/mca$ cd copy
+student@T14:~/ajce/mca/copy$ ls
+c1.txt  fake  file1.txt  file2.txt  g3.txt  merge  n1  n2  new.txt
+student@T14:~/ajce/mca/copy$ cd n2
+student@T14:~/ajce/mca/copy/n2$ ls
+student@T14:~/ajce/mca/copy/n2$ cat > head.txt
+asha
+arya
+dona
+arjun
+ashamary
+aparna      
+anju
+sruthy
+hrudya
+vishnu
+sandeep
+anjali
+albina
+student@T14:~/ajce/mca/copy/n2$ head head.txt
+asha
+arya
+dona
+arjun
+ashamary
+aparna
+anju
+sruthy
+hrudya
+vishnu
+student@T14:~/ajce/mca/copy/n2$ tail head.txt
+arjun
+ashamary
+aparna
+anju
+sruthy
+hrudya
+vishnu
+sandeep
+anjali
+albina
+student@T14:~/ajce/mca/copy/n2$ tail -5  head.txt
+hrudya
+vishnu
+sandeep
+anjali
+albina
+student@T14:~/ajce/mca/copy/n2$ man head
+student@T14:~/ajce/mca/copy/n2$ head -c head.txt
+head: invalid number of bytes: ‘head.txt’
+student@T14:~/ajce/mca/copy/n2$ head -n head.txt
+head: invalid number of lines: ‘head.txt’
+student@T14:~/ajce/mca/copy/n2$ head -c5 head.txt
+asha
+student@T14:~/ajce/mca/copy/n2$ head -n5 head.txt
+asha
+arya
+dona
+arjun
+ashamary
+student@T14:~/ajce/mca/copy/n2$ head -c6 head.txt
+asha
+astudent@T14:~/ajce/mca/copy/n2$ head -n10 head.txt | tail n1
+tail: cannot open 'n1' for reading: No such file or directory
+student@T14:~/ajce/mca/copy/n2$ head -n10 head.txt | tail n1 head.txt
+tail: cannot open 'n1' for reading: No such file or directory
+==> head.txt <==
+arjun
+ashamary
+aparna
+anju
+sruthy
+hrudya
+vishnu
+sandeep
+anjali
+albina
+student@T14:~/ajce/mca/copy/n2$ head -n10 head.txt | tail n 1
+tail: cannot open 'n' for reading: No such file or directory
+tail: cannot open '1' for reading: No such file or directory
+student@T14:~/ajce/mca/copy/n2$ head -n10 head.txt | tail -n 1
+vishnu
+student@T14:~/ajce/mca/copy/n2$ cat head.txt
+asha
+arya
+dona
+arjun
+ashamary
+aparna
+anju
+sruthy
+hrudya
+vishnu
+sandeep
+anjali
+albina
+student@T14:~/ajce/mca/copy/n2$ head -f1 head.txt
+head: invalid option -- 'f'
+Try 'head --help' for more information.
+student@T14:~/ajce/mca/copy/n2$ head -f head.txt
+head: invalid option -- 'f'
+Try 'head --help' for more information.
+student@T14:~/ajce/mca/copy/n2$ man head
+student@T14:~/ajce/mca/copy/n2$ head -v head.txt
+==> head.txt <==
+asha
+arya
+dona
+arjun
+ashamary
+aparna
+anju
+sruthy
+hrudya
+vishnu
+student@T14:~/ajce/mca/copy/n2$ head -v10 head.txt
+head: invalid trailing option -- 1
+Try 'head --help' for more information.
+student@T14:~/ajce/mca/copy/n2$ head -v head.txt
+==> head.txt <==
+asha
+arya
+dona
+arjun
+ashamary
+aparna
+anju
+sruthy
+hrudya
+vishnu
+student@T14:~/ajce/mca/copy/n2$ head -v 2 head.txt
+head: cannot open '2' for reading: No such file or directory
+==> head.txt <==
+asha
+arya
+dona
+arjun
+ashamary
+aparna
+anju
+sruthy
+hrudya
+vishnu
+student@T14:~/ajce/mca/copy/n2$ head -q head.txt
+asha
+arya
+dona
+arjun
+ashamary
+aparna
+anju
+sruthy
+hrudya
+vishnu
+student@T14:~/ajce/mca/copy/n2$ head -n10 head.txt | tail -n 2
+hrudya
+vishnu
+student@T14:~/ajce/mca/copy/n2$ head -n10 head.txt | tail -n 3
+sruthy
+hrudya
+vishnu
+student@T14:~/ajce/mca/copy/n2$ cat head.txt
+asha
+arya
+dona
+arjun
+ashamary
+aparna
+anju
+sruthy
+hrudya
+vishnu
+sandeep
+anjali
+albina
+student@T14:~/ajce/mca/copy/n2$ 
+

@@ -1,0 +1,80 @@
+student@T14:~$ vi dona.sh
+student@T14:~$ chmod +x file1.sh
+chmod: cannot access 'file1.sh': No such file or directory
+student@T14:~$ ./ dona.sh
+bash: ./: Is a directory
+student@T14:~$ chmod +x dona.sh
+student@T14:~$ ./ dona.sh
+bash: ./: Is a directory
+student@T14:~$ gedit file1.sh
+student@T14:~$ chmod +x file1.sh
+student@T14:~$ ./file1.sh
+hello...
+student@T14:~$ directory=`pwd`
+student@T14:~$ gedit file1.sh
+student@T14:~$ chmod +x file1.sh
+student@T14:~$ ./file1.sh
+hello...
+Hello World
+The date today is Thu Mar 21 14:30:18 IST 2019
+The current directory is /home/student
+student@T14:~$ var="test string"
+student@T14:~$ gedit file1.sh
+
+(gedit:2796): Gtk-WARNING **: 14:36:31.221: Failed to measure available space: The specified location is not supported
+student@T14:~$ chmod +x file2.sh
+student@T14:~$ ./file2.sh
+Value of var is test string
+student@T14:~$ gedit file3.sh
+student@T14:~$ chmod +x file3.sh
+student@T14:~$ ./file3.sh
+Value of var is $var
+student@T14:~$ gedit file3.sh
+student@T14:~$ gedit file4.sh
+student@T14:~$ ./file4.sh a b c d
+bash: ./file4.sh: Permission denied
+student@T14:~$ chmod +x file4.sh
+student@T14:~$ ./file4.sh a b c d
+The command is ./file4.sh
+The first argument is a
+The second argument is b
+The third argument is c
+The fourth argument is d
+student@T14:~$ gedit file4.sh
+student@T14:~$ chmod +x file4.sh
+student@T14:~$ ./file4.sh a b c d
+The command is 4
+The first argument is a b c d
+The second argument is a b c d
+The third argument is c
+The fourth argument is d
+student@T14:~$ gedit file4.sh
+student@T14:~$ gedit file5.sh
+student@T14:~$ chmod +x file5.sh
+student@T14:~$ ./file5.sh
+
+
+student@T14:~$ gedit file5.sh
+student@T14:~$ chmod +x file5.sh
+student@T14:~$ ./file5.sh
+
+
+student@T14:~$ gedit var.sh
+student@T14:~$ chmod +x var.sh
+student@T14:~$ ./var.sh
+5+10=15
+student@T14:~$ gedit arith.sh
+student@T14:~$ chmod +x arith.sh
+student@T14:~$ ./arith.sh
+Enter two numbers : 2 4
+2+4=6
+student@T14:~$ gedit arith2.sh
+student@T14:~$ chmod +x arith2.sh
+student@T14:~$ ./arith2.sh
+Sum is 10+20
+student@T14:~$ gedit arith2.sh
+student@T14:~$ chmod +x arith2.sh
+student@T14:~$ ./arith2.sh
+Sum is 30
+student@T14:~$ 
+

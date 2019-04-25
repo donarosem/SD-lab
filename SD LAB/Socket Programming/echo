@@ -1,0 +1,122 @@
+server
+
+
+
+eIMPLEMENTAION OF ECHO SERVER USING TCP/IP
+
+	SERVER		
+
+//source code of ECHO message print in  java programming of client-server  TCP/IP 
+import java.net.*;
+import java.io.*;
+public class Server2 
+{
+	public static void main( String args[]) throws Exception
+	{
+		ServerSocket srs = new ServerSocket(1234);
+		System.out.println("Server is running...");
+		Socket ss=srs.accept();
+		System.out.println("connection establised");
+		BufferedReader br = new BufferedReader(new InputStreamReader(ss.getInputStream()));
+		DataOutputStream dos = new DataOutputStream(ss.getOutputStream());
+
+ while(true)
+ {
+   String s2; 
+  while((s2=br.readLine())!=null)
+  {
+ 	System.out.println("server send echo to client ");
+ 	dos.writeBytes(s2+"\n");
+  }
+  System.out.println("Terminated..");
+  ss.close(); 
+  srs.close();
+  dos.close();
+  System.exit(0);
+  }
+ }
+}
+
+output
+
+student@T70:~$ gedit Server.java
+student@T70:~$ javac Server.java
+student@T70:~$ java Server
+Server is running...
+connection establised
+server send echo to client 
+how are u?
+server send echo to client 
+server send echo to client 
+Terminated..
+student@T70:~$ how are u?
+
+Command 'how' not found, did you mean:
+
+  command 'sow' from deb ruby-hoe
+  command 'cow' from deb fl-cow
+  command 'hoz' from deb hoz
+  command 'show' from deb mailutils-mh
+  command 'show' from deb mmh
+  command 'show' from deb nmh
+  command 'hot' from deb hopenpgp-tools
+
+Try: apt install <deb name>
+
+client
+
+
+
+//source code of ECHO message print in  java programming of client-server  TCP/IP 
+import java.net.*;
+import java.io.*;
+public class Client2 
+{
+	public static void main( String args[]) throws Exception
+	{
+	Socket cs = new Socket("localhost",1234);
+	BufferedReader kb = new BufferedReader(new InputStreamReader(System.in));
+	BufferedReader br = new BufferedReader(new InputStreamReader(cs.getInputStream()));
+	DataOutputStream dos = new DataOutputStream(cs.getOutputStream());
+
+	System.out.println(" Enter text..");
+	System.out.println(" if client 'quit' type  exit");
+	  
+	String s1,s3=null; 
+	while(!(s1=kb.readLine()).equals("exit"))
+	{
+		//System.out.println(" data  send to server machine");
+	 	dos.writeBytes(s1+"\n");
+		s3 = br.readLine();
+		//System.out.println(" data  receive from  server machine");
+		System.out.println("Server said : "+s3);
+		System.out.println("Enter text ");
+	}
+		System.out.println("Terminated..");
+		cs.close(); 
+		dos.close();
+		kb.close();
+	}
+}
+
+
+student@T70:~$ gedit Client.java
+student@T70:~$ javac Client.java
+student@T70:~$ java Client
+ Enter text..
+ if client 'quit' type  exit
+hello
+Server said : hello
+Enter text 
+how are u?
+Server said : how are u?
+Enter text 
+quit
+Server said : quit
+Enter text 
+exit
+Terminated..
+
+
+
+

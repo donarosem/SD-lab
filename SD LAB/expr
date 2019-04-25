@@ -1,0 +1,131 @@
+
+student@T14:~$ expr 2 + 3
+5
+
+student@T14:~$ expr 2 \* 3
+6
+student@T14:~$ man expr
+
+student@T14:~$ a=10
+student@T14:~$ echo $a
+10
+
+
+student@T14:~$ a=10
+student@T14:~$ echo $a
+10
+
+student@T14:~$ k=10
+student@T14:~$ k=`expr $k - 1`
+student@T14:~$ echo $k
+9
+student@T14:~$ n=5
+student@T14:~$ n=`expr $n + 1`
+student@T14:~$ echo $n
+6
+
+student@T14:~$ read a
+6
+student@T14:~$ read b
+4
+
+student@T14:~$ sum=`expr $a + $b`
+student@T14:~$ echo "sum = $sum"
+sum = 10
+student@T14:~$ echo "Multiply Two Numbers"
+Multiply Two Numbers
+student@T14:~$ read x
+2
+student@T14:~$ read y
+4
+student@T14:~$ mult=`expr $x \* $y`
+student@T14:~$ echo "Result = $mult"
+Result = 8
+student@T14:~$ expr -- help
+help
+student@T14:~$ expr -- 
+expr: missing operand
+Try 'expr --help' for more information.
+student@T14:~$ expr --help
+Usage: expr EXPRESSION
+  or:  expr OPTION
+
+      --help     display this help and exit
+      --version  output version information and exit
+
+Print the value of EXPRESSION to standard output.  A blank line below
+separates increasing precedence groups.  EXPRESSION may be:
+
+  ARG1 | ARG2       ARG1 if it is neither null nor 0, otherwise ARG2
+
+  ARG1 & ARG2       ARG1 if neither argument is null or 0, otherwise 0
+
+  ARG1 < ARG2       ARG1 is less than ARG2
+  ARG1 <= ARG2      ARG1 is less than or equal to ARG2
+  ARG1 = ARG2       ARG1 is equal to ARG2
+  ARG1 != ARG2      ARG1 is unequal to ARG2
+  ARG1 >= ARG2      ARG1 is greater than or equal to ARG2
+  ARG1 > ARG2       ARG1 is greater than ARG2
+
+  ARG1 + ARG2       arithmetic sum of ARG1 and ARG2
+  ARG1 - ARG2       arithmetic difference of ARG1 and ARG2
+
+  ARG1 * ARG2       arithmetic product of ARG1 and ARG2
+  ARG1 / ARG2       arithmetic quotient of ARG1 divided by ARG2
+  ARG1 % ARG2       arithmetic remainder of ARG1 divided by ARG2
+
+  STRING : REGEXP   anchored pattern match of REGEXP in STRING
+
+  match STRING REGEXP        same as STRING : REGEXP
+  substr STRING POS LENGTH   substring of STRING, POS counted from 1
+  index STRING CHARS         index in STRING where any CHARS is found, or 0
+  length STRING              length of STRING
+  + TOKEN                    interpret TOKEN as a string, even if it is a
+                               keyword like 'match' or an operator like '/'
+
+  ( EXPRESSION )             value of EXPRESSION
+
+Beware that many operators need to be escaped or quoted for shells.
+Comparisons are arithmetic if both ARGs are numbers, else lexicographical.
+Pattern matches return the string matched between \( and \) or null; if
+\( and \) are not used, they return the number of characters matched or 0.
+
+Exit status is 0 if EXPRESSION is neither null nor 0, 1 if EXPRESSION is null
+or 0, 2 if EXPRESSION is syntactically invalid, and 3 if an error occurred.
+
+GNU coreutils online help: <http://www.gnu.org/software/coreutils/>
+Full documentation at: <http://www.gnu.org/software/coreutils/expr>
+or available locally via: info '(coreutils) expr invocation'
+
+student@T14:~$ a=dona
+student@T14:~$ len=`expr length $a`
+student@T14:~$ echo $len
+4
+
+student@T14:~$ s=substring
+student@T14:~$ sub=`expr substr $s 1 4 `
+student@T14:~$ echo $sub
+subs
+
+student@T14:~$ a=hai
+student@T14:~$ b=hello
+student@T14:~$ result=`expr $a = $b`
+student@T14:~$ echo result
+result
+student@T14:~$ echo $result
+0
+student@T14:~$ a=hai
+student@T14:~$ b=hai
+student@T14:~$ result=`expr $a = $b`
+student@T14:~$ echo $result
+1
+
+student@T14:~$ a=hai
+student@T14:~$ b=hello
+student@T14:~$ res=`expr $a$b`
+student@T14:~$ echo $res
+haihello
+
+
+
+
